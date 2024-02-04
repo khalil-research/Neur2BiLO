@@ -1,0 +1,5 @@
+1. Ten instances in each of the 15 Data Sets.
+2. Every Instance is an independent MsExcel file - example 2nd Instance in 3rd Data Set can be found in DataSet3 as 'Instance2.xlsx'. 
+3. This file has solution of the instance by both the algorithms in independent sheets for different Epsilon and Big M.
+4. The results are reported altogether in MsExcel file 'Results_Detailed.xlsx'.
+5. The results are summarized in MsExcel file 'Results_Summary.xlsx'.
