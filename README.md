@@ -10,7 +10,7 @@ Please cite our work if you find our code/paper useful to your work.
 
 ```
   @article{dumouchelle2024neur2bilo,
-    title={Neur2RO: Neural Bilevel Optimization},
+    title={Neur2BiLO: Neural Bilevel Optimization},
     author={Dumouchelle, Justin and Julien, Esther and Kurtz, Jannis and Khalil, Elias B},
     journal={arXiv preprint arXiv:2402.02552},
     year={2024}
