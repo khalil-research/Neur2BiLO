@@ -36,6 +36,7 @@ node game, 2023.
 ### Donor Recipient Problem
 - Reference: Shraddha Ghatkar, Ashwin Arulselvan, and Alec Morton. Solution techniques for bi-level knapsack problems. *Computers & Operations Research*, 159:106343, 2023.
 - Link to instances: [https://github.com/ashwin-1983/DR-BKP/](https://github.com/ashwin-1983/DR-BKP/)
+- Note that if using these instances with our code, they will need to be downloaded, unzipped, and moved to `data/dr/DR-BKP-main/`.
 
 ### Discrete Network Design Problem
 - Reference: David Rey. Computational benchmarking of exact methods for the bilevel discrete network design problem. *Transportation Research Procedia*, 47:11–18, 2020.
