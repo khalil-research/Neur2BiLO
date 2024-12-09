@@ -1,0 +1,510 @@
+License for 'CIBOL Team' expires on Mon Aug  8 20:00:00 2039
+ 
+../blo/baselines/blo_solver/solver/bilevel -mpsfile data/cng/solver_instances/v-50_g-0.0_ep-1.25_de-0.8_dr-0.75_ar-0.1__i-7_v-50_g-0.0-0.1_et-0.6-0.8_ep-1.25_d-0.8_dr-0.3-0.75_ar-0.03-0.1-0.3_nsi-1000_nspi-100_s-7.mps -setting 4 -time_limit 3600 -print_sol 2 
+... using custom setting 4
+The chosen setting is MIX++
+
+
+available parameters --------------------------------------------------
+-mpsfile data/cng/solver_instances/v-50_g-0.0_ep-1.25_de-0.8_dr-0.75_ar-0.1__i-7_v-50_g-0.0-0.1_et-0.6-0.8_ep-1.25_d-0.8_dr-0.3-0.75_ar-0.03-0.1-0.3_nsi-1000_nspi-100_s-7.mps (the input file, part 1, needs to end with .mps; see readme.md for details on the format)
+-auxfile data/cng/solver_instances/v-50_g-0.0_ep-1.25_de-0.8_dr-0.75_ar-0.1__i-7_v-50_g-0.0-0.1_et-0.6-0.8_ep-1.25_d-0.8_dr-0.3-0.75_ar-0.03-0.1-0.3_nsi-1000_nspi-100_s-7.aux (the input file, part 2, needs to end with .aux; only needs to be given if differently named as the mps-file)
+-time_limit, 3600 (in seconds, default: 3600)
+-available_memory, 12000 (in MB, default: 12000)
+-nodefile . (location for CPLEX nodefile to be used if available_memory is exhausted, default: current directory)
+-num_threads, 0 (0: all available (default); note: opportunistic mode of CPLEX, to change see next option)
+-randomseed, 0 (negative seed turns on deterministic multithread mode of CPLEX, default: 0)
+-node_limit, -1 (-1: no limit (default))
+-cplex_cuts, 1 (0: off, 1: normal (default), 2: moderate, 3: aggressive)
+-print_sol, 2 (0: no, 1: print nonzero entries of the final solution (default), 2: print also the zero entries)
+-setting, 4 (see below for description, default: MIX++)
+ ----------------------------------------------------------------------------------------------
+
+AVAILABLE SETTINGS------------------------------------------------------------------------------
+1 SEP1++
+2 SEP2++
+3 XU++
+4 MIX++
+21 SEP1+F
+22 SEP2+F
+23 XU+F
+24 MIX+F
+31 SEP1+P
+32 SEP2+P
+33 XU+P
+34 MIX+P
+41 SEP1
+42 SEP2
+43 XU
+44 MIX
+98 HC
+99 HC++
+----------------------------------------------------------------------------------------------
+
+ ... Cplex in opportunistic mode with 32 thread(s)
+Specified objective sense: MAXIMIZE
+Selected objective  name:  cost
+Selected RHS        name:  rhs
+Selected bound      name:  bound
+HPR has 300 cols
+Original HPR has 602 rows
+Change leader objective from MAX to MIN
+Updated HPR has 602 rows
+Follower variables integer 1 binary 1
+Leader variables integer 1 binary 1
+Problem variables integer 1 binary 1
+Body has 602 rows 
+Leader objective all integer (var+coeff?) 0
+Follower objective all integer (var+coeff?) 0
+Leader all integer (obj+cons+var?) 0
+Follower all integer (obj+cons+var?) 0
+Leader has 50 cols
+Leader has 1 rows
+Follower has 250 cols
+Follower has 601 rows
+
+
+
+ -------------- PROBLEM STATISTICS for data/cng/solver_instances/v-50_g-0.0_ep-1.25_de-0.8_dr-0.75_ar-0.1__i-7_v-50_g-0.0-0.1_et-0.6-0.8_ep-1.25_d-0.8_dr-0.3-0.75_ar-0.03-0.1-0.3_nsi-1000_nspi-100_s-7.mps 
+      master   with     0 integer and   300 binary variables (out of   300 var.s) and   602 constr.s
+      follower with     0 integer and   250 binary variables (out of   300 var.s) and   601 constr.s
+ --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Warning: Control callbacks may disable some MIP features.
+Probing time = 0.00 sec. (0.36 ticks)
+Clique table members: 250.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: traditional branch-and-cut.
+Parallel mode: opportunistic, using up to 32 threads.
+Parallel mode: opportunistic, using up to 32 threads for concurrent optimization.
+
+Iteration log . . .
+Iteration:     1   Dual objective     =         -4430.720000
+Iteration:   106   Dual objective     =         -3587.560000
+Iteration:   209   Dual objective     =         -2731.413818
+Iteration:   295   Dual objective     =         -2279.991467
+Using devex.
+
+Primal simplex solved model.
+
+Root relaxation solution time = 0.01 sec. (2.16 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0    -1786.9600   132                  -1786.9600      472         
+      0     0    -1456.9726    60                   Cuts: 112      514         
+      0     0    -1398.1600    42                    Cuts: 51      536         
+      0     0    -1369.9771    42                    Cuts: 37      553         
+      0     0    -1318.2400    24                    Cuts: 37      621         
+      0     0    -1288.0000     4                 Cliques: 20      629         
+*     0+    0                        -1241.5200    -1288.0000             3.74%
+Found incumbent of value -1241.520000 after 0.09 sec. (30.59 ticks)
+      0     0    -1288.0000     7    -1241.5200       User: 2      630    3.74%
+      0     0    -1285.8400    25    -1241.5200       User: 2      659    3.57%
+      0     0    -1285.8400     6    -1241.5200    MIRcuts: 2      662    3.57%
+
+Clique cuts applied:  250
+Mixed integer rounding cuts applied:  1
+User cuts applied:  6
+
+Root node processing (before b&c):
+  Real time             =    0.14 sec. (40.81 ticks)
+Parallel b&c, 32 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.14 sec. (40.81 ticks)
+Warning: Control callbacks may disable some MIP features.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: traditional branch-and-cut.
+Parallel mode: opportunistic, using up to 32 threads.
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0    -1284.4138     4    -1241.5200       Cuts: 2      669    3.45%
+      0     0    -1284.4138     7    -1241.5200       Cuts: 2      671    3.45%
+      0     0    -1284.4138    10    -1241.5200    MIRcuts: 1      672    3.45%
+      0     0    -1284.4138     3    -1241.5200       User: 2      673    3.45%
+      0     0    -1284.4138     6    -1241.5200       User: 2      678    3.45%
+      0     2    -1284.4138     6    -1241.5200       Cuts: 2      678    3.45%
+Elapsed time = 1.15 sec. (22.98 ticks, tree = 0.01 MB, solutions = 1)
+   4658  2248    -1284.4111     9    -1241.5200    -1284.4138    21724    3.45%
+                                                      Cuts: 2                  
+   8441  4806    -1277.8072    33    -1241.5200    -1284.4138    59580    3.45%
+                                                     Cuts: 80                  
+  12286  9120    -1279.4335    18    -1241.5200    -1284.4138   138738    3.45%
+                                                     Cuts: 76                  
+  15719 12684    -1278.0771    21    -1241.5200    -1284.4138   204537    3.45%
+                                                     Cuts: 68                  
+  19068 13851    -1280.1371    15    -1241.5200    -1284.4138   229613    3.45%
+                                                     Cuts: 40                  
+  22315 16628    -1280.1128    12    -1244.0400    -1284.4138   283031    3.25%
+                                                     Cuts: 64                  
+  25605 19512        cutoff          -1244.0400    -1284.4138   349447    3.25%
+                                                     Cuts: 54                  
+  28510 22281    -1278.4178    13    -1244.0400    -1284.4138   411283    3.25%
+                                                     Cuts: 52                  
+  31372 23422    -1280.7598    15    -1244.0400    -1284.4138   433929    3.25%
+                                                     Cuts: 94                  
+  42551 32471    -1276.8231    27    -1244.0400    -1284.4138   641483    3.25%
+                                                    Cuts: 174                  
+Elapsed time = 1126.72 sec. (3122.97 ticks, tree = 29.16 MB, solutions = 2)
+  54363 38750    -1276.6918    21    -1244.0400    -1284.4115   806282    3.25%
+                                                    Cuts: 220                  
+  66692 47481        cutoff          -1244.0400    -1284.4111  1044926    3.25%
+                                                    Cuts: 210                  
+  78105 57629    -1280.6708    13    -1244.0400    -1284.4111  1262736    3.25%
+                                                    Cuts: 192                  
+  89213 64511    -1284.4104     9    -1244.0400    -1284.4111  1420330    3.25%
+                                                    Cuts: 128                  
+  99045 70432    -1281.7784     9    -1244.0400    -1284.4111  1562360    3.25%
+                                                    Cuts: 300                  
+ 109044 80118    -1284.4104     9    -1244.0400    -1284.4111  1778133    3.25%
+                                                    Cuts: 104                  
+ 119138 84825        cutoff          -1244.0400    -1284.4111  1860327    3.25%
+                                                    Cuts: 122                  
+ 128937 92187    -1284.4104     9    -1244.0400    -1284.4104  1967742    3.25%
+                                                    Cuts: 230                  
+ 138159 96644    -1277.4243    15    -1244.0400    -1284.4104  2031980    3.25%
+                                                    Cuts: 124                  
+ 146821 102783        cutoff          -1244.0400    -1284.4104  2121001    3.25%
+                                                    Cuts: 136                  
+Elapsed time = 3325.43 sec. (12660.44 ticks, tree = 87.91 MB, solutions = 2)
+ 155367 110857        cutoff          -1244.0400    -1284.4104  2236677    3.25%
+                                                    Cuts: 106                  
+ 163448 114725    -1280.4392    18    -1244.0400    -1284.4104  2294693    3.25%
+                                                    Cuts: 228                  
+
+Clique cuts applied:  250
+Cover cuts applied:  1413
+Gomory fractional cuts applied:  1
+User cuts applied:  10
+
+Root node processing (before b&c):
+  Real time             =    0.07 sec. (22.60 ticks)
+Parallel b&c, 32 threads:
+  Real time             = 3599.80 sec. (15257.03 ticks)
+  Sync time (average)   =    0.56 sec.
+  Wait time (average)   =    0.05 sec.
+                          ------------
+Total (root+branch&cut) = 3599.87 sec. (15279.63 ticks)
+
+
+ >>>> Final solution: leader objective value -1244.0400000000 (cplex value -1244.0400000000 truecost -1244.0400000000) time    3600.04 <<<<
+
+
+
+ OK: feasibility check passed with cost -1244.040000 and f* -177.40000000000000568434 vs Phi(x*) -177.40000000000000568434
+
+STAH; input_file ; zbest ; final_bound ; root_bound; time (s.); root_time (s.); opt ;nodes ; %root_gap; %final_gap; setting 
+STAT; data/cng/solver_instances/v-50_g-0.0_ep-1.25_de-0.8_dr-0.75_ar-0.1__i-7_v-50_g-0.0-0.1_et-0.6-0.8_ep-1.25_d-0.8_dr-0.3-0.75_ar-0.03-0.1-0.3_nsi-1000_nspi-100_s-7.mps ; -1244.040000 ; -1284.410383  ; -1285.840000 ; 3600.043173 ; 0.173684 ; 0 ;165274 ; 3.360021 ; 3.245103 ; 4 
+
+
+-------------------------------------------------------------------------------------------------------------------------
+ BEST SOLUTION AVAILABLE FOR data/cng/solver_instances/v-50_g-0.0_ep-1.25_de-0.8_dr-0.75_ar-0.1__i-7_v-50_g-0.0-0.1_et-0.6-0.8_ep-1.25_d-0.8_dr-0.3-0.75_ar-0.03-0.1-0.3_nsi-1000_nspi-100_s-7.mps 
+ LEADER COST -1244.040000 FOLLOWER COST -177.400000
+
+                    x0                  -0.0000000000
+                    x1                   1.0000000000
+                    x2                   1.0000000000
+                    x3                   1.0000000000
+                    x4                   1.0000000000
+                    x5                  -0.0000000000
+                    x6                   1.0000000000
+                    x7                   1.0000000000
+                    x8                   1.0000000000
+                    x9                   1.0000000000
+                   x10                   1.0000000000
+                   x11                   1.0000000000
+                   x12                   1.0000000000
+                   x13                  -0.0000000000
+                   x14                   1.0000000000
+                   x15                   1.0000000000
+                   x16                  -0.0000000000
+                   x17                   1.0000000000
+                   x18                  -0.0000000000
+                   x19                   1.0000000000
+                   x20                   1.0000000000
+                   x21                  -0.0000000000
+                   x22                   1.0000000000
+                   x23                   1.0000000000
+                   x24                   1.0000000000
+                   x25                   1.0000000000
+                   x26                   1.0000000000
+                   x27                  -0.0000000000
+                   x28                  -0.0000000000
+                   x29                   1.0000000000
+                   x30                   1.0000000000
+                   x31                   1.0000000000
+                   x32                   1.0000000000
+                   x33                   1.0000000000
+                   x34                  -0.0000000000
+                   x35                   1.0000000000
+                   x36                  -0.0000000000
+                   x37                   1.0000000000
+                   x38                  -0.0000000000
+                   x39                   1.0000000000
+                   x40                  -0.0000000000
+                   x41                   1.0000000000
+                   x42                  -0.0000000000
+                   x43                   1.0000000000
+                   x44                   1.0000000000
+                   x45                   1.0000000000
+                   x46                  -0.0000000000
+                   x47                   1.0000000000
+                   x48                  -0.0000000000
+                   x49                   1.0000000000
+                    y0                   1.0000000000
+                    y1                  -0.0000000000
+                    y2                   0.0000000000
+                    y3                  -0.0000000000
+                    y4                  -0.0000000000
+                    y5                  -0.0000000000
+                    y6                   1.0000000000
+                    y7                  -0.0000000000
+                    y8                  -0.0000000000
+                    y9                   0.0000000000
+                   y10                  -0.0000000000
+                   y11                  -0.0000000000
+                   y12                   0.0000000000
+                   y13                   0.0000000000
+                   y14                   0.0000000000
+                   y15                  -0.0000000000
+                   y16                  -0.0000000000
+                   y17                  -0.0000000000
+                   y18                   1.0000000000
+                   y19                   0.0000000000
+                   y20                   0.0000000000
+                   y21                  -0.0000000000
+                   y22                  -0.0000000000
+                   y23                  -0.0000000000
+                   y24                  -0.0000000000
+                   y25                   0.0000000000
+                   y26                  -0.0000000000
+                   y27                   1.0000000000
+                   y28                  -0.0000000000
+                   y29                  -0.0000000000
+                   y30                   0.0000000000
+                   y31                  -0.0000000000
+                   y32                   0.0000000000
+                   y33                  -0.0000000000
+                   y34                   1.0000000000
+                   y35                   0.0000000000
+                   y36                  -0.0000000000
+                   y37                  -0.0000000000
+                   y38                   0.0000000000
+                   y39                  -0.0000000000
+                   y40                  -0.0000000000
+                   y41                   0.0000000000
+                   y42                   0.0000000000
+                   y43                   0.0000000000
+                   y44                  -0.0000000000
+                   y45                  -0.0000000000
+                   y46                  -0.0000000000
+                   y47                   0.0000000000
+                   y48                   1.0000000000
+                   y49                  -0.0000000000
+                 z_xy0                  -0.0000000000
+                 z_xy1                  -0.0000000000
+                 z_xy2                  -0.0000000000
+                 z_xy3                  -0.0000000000
+                 z_xy4                  -0.0000000000
+                 z_xy5                  -0.0000000000
+                 z_xy6                   1.0000000000
+                 z_xy7                   0.0000000000
+                 z_xy8                   0.0000000000
+                 z_xy9                  -0.0000000000
+                z_xy10                  -0.0000000000
+                z_xy11                   0.0000000000
+                z_xy12                  -0.0000000000
+                z_xy13                  -0.0000000000
+                z_xy14                  -0.0000000000
+                z_xy15                  -0.0000000000
+                z_xy16                   0.0000000000
+                z_xy17                  -0.0000000000
+                z_xy18                  -0.0000000000
+                z_xy19                   0.0000000000
+                z_xy20                   0.0000000000
+                z_xy21                  -0.0000000000
+                z_xy22                   0.0000000000
+                z_xy23                  -0.0000000000
+                z_xy24                   0.0000000000
+                z_xy25                   0.0000000000
+                z_xy26                  -0.0000000000
+                z_xy27                  -0.0000000000
+                z_xy28                  -0.0000000000
+                z_xy29                  -0.0000000000
+                z_xy30                  -0.0000000000
+                z_xy31                   0.0000000000
+                z_xy32                  -0.0000000000
+                z_xy33                   0.0000000000
+                z_xy34                  -0.0000000000
+                z_xy35                  -0.0000000000
+                z_xy36                  -0.0000000000
+                z_xy37                   0.0000000000
+                z_xy38                  -0.0000000000
+                z_xy39                   0.0000000000
+                z_xy40                   0.0000000000
+                z_xy41                   0.0000000000
+                z_xy42                  -0.0000000000
+                z_xy43                  -0.0000000000
+                z_xy44                   0.0000000000
+                z_xy45                   0.0000000000
+                z_xy46                  -0.0000000000
+                z_xy47                  -0.0000000000
+                z_xy48                  -0.0000000000
+                z_xy49                   0.0000000000
+                z_xny0                   0.0000000000
+                z_xny1                   1.0000000000
+                z_xny2                   1.0000000000
+                z_xny3                   1.0000000000
+                z_xny4                   1.0000000000
+                z_xny5                   0.0000000000
+                z_xny6                   0.0000000000
+                z_xny7                   1.0000000000
+                z_xny8                   1.0000000000
+                z_xny9                   1.0000000000
+               z_xny10                   1.0000000000
+               z_xny11                   1.0000000000
+               z_xny12                   1.0000000000
+               z_xny13                   0.0000000000
+               z_xny14                   1.0000000000
+               z_xny15                   1.0000000000
+               z_xny16                   0.0000000000
+               z_xny17                   1.0000000000
+               z_xny18                   0.0000000000
+               z_xny19                   1.0000000000
+               z_xny20                   1.0000000000
+               z_xny21                   0.0000000000
+               z_xny22                   1.0000000000
+               z_xny23                   1.0000000000
+               z_xny24                   1.0000000000
+               z_xny25                   1.0000000000
+               z_xny26                   1.0000000000
+               z_xny27                  -0.0000000000
+               z_xny28                   0.0000000000
+               z_xny29                   1.0000000000
+               z_xny30                   1.0000000000
+               z_xny31                   1.0000000000
+               z_xny32                   1.0000000000
+               z_xny33                   1.0000000000
+               z_xny34                   0.0000000000
+               z_xny35                   1.0000000000
+               z_xny36                   0.0000000000
+               z_xny37                   1.0000000000
+               z_xny38                   0.0000000000
+               z_xny39                   1.0000000000
+               z_xny40                   0.0000000000
+               z_xny41                   1.0000000000
+               z_xny42                   0.0000000000
+               z_xny43                   1.0000000000
+               z_xny44                   1.0000000000
+               z_xny45                   1.0000000000
+               z_xny46                   0.0000000000
+               z_xny47                   1.0000000000
+               z_xny48                   0.0000000000
+               z_xny49                   1.0000000000
+                z_nxy0                   1.0000000000
+                z_nxy1                  -0.0000000000
+                z_nxy2                  -0.0000000000
+                z_nxy3                   0.0000000000
+                z_nxy4                  -0.0000000000
+                z_nxy5                   0.0000000000
+                z_nxy6                  -0.0000000000
+                z_nxy7                   0.0000000000
+                z_nxy8                  -0.0000000000
+                z_nxy9                  -0.0000000000
+               z_nxy10                  -0.0000000000
+               z_nxy11                  -0.0000000000
+               z_nxy12                  -0.0000000000
+               z_nxy13                  -0.0000000000
+               z_nxy14                   0.0000000000
+               z_nxy15                  -0.0000000000
+               z_nxy16                   0.0000000000
+               z_nxy17                  -0.0000000000
+               z_nxy18                   1.0000000000
+               z_nxy19                   0.0000000000
+               z_nxy20                  -0.0000000000
+               z_nxy21                  -0.0000000000
+               z_nxy22                   0.0000000000
+               z_nxy23                  -0.0000000000
+               z_nxy24                  -0.0000000000
+               z_nxy25                   0.0000000000
+               z_nxy26                  -0.0000000000
+               z_nxy27                   1.0000000000
+               z_nxy28                  -0.0000000000
+               z_nxy29                  -0.0000000000
+               z_nxy30                  -0.0000000000
+               z_nxy31                  -0.0000000000
+               z_nxy32                  -0.0000000000
+               z_nxy33                   0.0000000000
+               z_nxy34                   1.0000000000
+               z_nxy35                  -0.0000000000
+               z_nxy36                   0.0000000000
+               z_nxy37                   0.0000000000
+               z_nxy38                   0.0000000000
+               z_nxy39                  -0.0000000000
+               z_nxy40                   0.0000000000
+               z_nxy41                  -0.0000000000
+               z_nxy42                  -0.0000000000
+               z_nxy43                  -0.0000000000
+               z_nxy44                  -0.0000000000
+               z_nxy45                  -0.0000000000
+               z_nxy46                   0.0000000000
+               z_nxy47                   0.0000000000
+               z_nxy48                   1.0000000000
+               z_nxy49                   0.0000000000
+               z_nxny0                   0.0000000000
+               z_nxny1                   0.0000000000
+               z_nxny2                  -0.0000000000
+               z_nxny3                   0.0000000000
+               z_nxny4                  -0.0000000000
+               z_nxny5                   1.0000000000
+               z_nxny6                  -0.0000000000
+               z_nxny7                   0.0000000000
+               z_nxny8                   0.0000000000
+               z_nxny9                   0.0000000000
+              z_nxny10                   0.0000000000
+              z_nxny11                   0.0000000000
+              z_nxny12                   0.0000000000
+              z_nxny13                   1.0000000000
+              z_nxny14                   0.0000000000
+              z_nxny15                  -0.0000000000
+              z_nxny16                   1.0000000000
+              z_nxny17                   0.0000000000
+              z_nxny18                   0.0000000000
+              z_nxny19                   0.0000000000
+              z_nxny20                   0.0000000000
+              z_nxny21                   1.0000000000
+              z_nxny22                   0.0000000000
+              z_nxny23                  -0.0000000000
+              z_nxny24                   0.0000000000
+              z_nxny25                   0.0000000000
+              z_nxny26                   0.0000000000
+              z_nxny27                   0.0000000000
+              z_nxny28                   1.0000000000
+              z_nxny29                  -0.0000000000
+              z_nxny30                   0.0000000000
+              z_nxny31                   0.0000000000
+              z_nxny32                   0.0000000000
+              z_nxny33                  -0.0000000000
+              z_nxny34                   0.0000000000
+              z_nxny35                   0.0000000000
+              z_nxny36                   1.0000000000
+              z_nxny37                   0.0000000000
+              z_nxny38                   1.0000000000
+              z_nxny39                   0.0000000000
+              z_nxny40                   1.0000000000
+              z_nxny41                   0.0000000000
+              z_nxny42                   1.0000000000
+              z_nxny43                   0.0000000000
+              z_nxny44                   0.0000000000
+              z_nxny45                   0.0000000000
+              z_nxny46                   1.0000000000
+              z_nxny47                   0.0000000000
+              z_nxny48                   0.0000000000
+              z_nxny49                   0.0000000000
+-------------------------------------------------------------------------------------------------------------------------
+

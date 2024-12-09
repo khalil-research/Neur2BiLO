@@ -1,0 +1,232 @@
+License for 'CIBOL Team' expires on Mon Aug  8 20:00:00 2039
+ 
+../blo/baselines/blo_solver/solver/bilevel -mpsfile data/cng/solver_instances/v-500_g-0.1_ep-1.25_de-0.8_dr-0.75_ar-0.03__i-1_v-500_g-0.0-0.1_et-0.6-0.8_ep-1.25_d-0.8_dr-0.3-0.75_ar-0.03-0.1-0.3_nsi-1000_nspi-100_s-7.mps -setting 4 -time_limit 3600 -print_sol 2 
+... using custom setting 4
+The chosen setting is MIX++
+
+
+available parameters --------------------------------------------------
+-mpsfile data/cng/solver_instances/v-500_g-0.1_ep-1.25_de-0.8_dr-0.75_ar-0.03__i-1_v-500_g-0.0-0.1_et-0.6-0.8_ep-1.25_d-0.8_dr-0.3-0.75_ar-0.03-0.1-0.3_nsi-1000_nspi-100_s-7.mps (the input file, part 1, needs to end with .mps; see readme.md for details on the format)
+-auxfile data/cng/solver_instances/v-500_g-0.1_ep-1.25_de-0.8_dr-0.75_ar-0.03__i-1_v-500_g-0.0-0.1_et-0.6-0.8_ep-1.25_d-0.8_dr-0.3-0.75_ar-0.03-0.1-0.3_nsi-1000_nspi-100_s-7.aux (the input file, part 2, needs to end with .aux; only needs to be given if differently named as the mps-file)
+-time_limit, 3600 (in seconds, default: 3600)
+-available_memory, 12000 (in MB, default: 12000)
+-nodefile . (location for CPLEX nodefile to be used if available_memory is exhausted, default: current directory)
+-num_threads, 0 (0: all available (default); note: opportunistic mode of CPLEX, to change see next option)
+-randomseed, 0 (negative seed turns on deterministic multithread mode of CPLEX, default: 0)
+-node_limit, -1 (-1: no limit (default))
+-cplex_cuts, 1 (0: off, 1: normal (default), 2: moderate, 3: aggressive)
+-print_sol, 2 (0: no, 1: print nonzero entries of the final solution (default), 2: print also the zero entries)
+-setting, 4 (see below for description, default: MIX++)
+ ----------------------------------------------------------------------------------------------
+
+AVAILABLE SETTINGS------------------------------------------------------------------------------
+1 SEP1++
+2 SEP2++
+3 XU++
+4 MIX++
+21 SEP1+F
+22 SEP2+F
+23 XU+F
+24 MIX+F
+31 SEP1+P
+32 SEP2+P
+33 XU+P
+34 MIX+P
+41 SEP1
+42 SEP2
+43 XU
+44 MIX
+98 HC
+99 HC++
+----------------------------------------------------------------------------------------------
+
+ ... Cplex in opportunistic mode with 44 thread(s)
+Specified objective sense: MAXIMIZE
+Selected objective  name:  cost
+Selected RHS        name:  rhs
+Selected bound      name:  bound
+HPR has 3000 cols
+Original HPR has 6002 rows
+Change leader objective from MAX to MIN
+Updated HPR has 6002 rows
+Follower variables integer 1 binary 1
+Leader variables integer 1 binary 1
+Problem variables integer 1 binary 1
+Body has 6002 rows 
+Leader objective all integer (var+coeff?) 0
+Follower objective all integer (var+coeff?) 0
+Leader all integer (obj+cons+var?) 0
+Follower all integer (obj+cons+var?) 0
+Leader has 500 cols
+Leader has 1 rows
+Follower has 2500 cols
+Follower has 6001 rows
+
+
+
+ -------------- PROBLEM STATISTICS for data/cng/solver_instances/v-500_g-0.1_ep-1.25_de-0.8_dr-0.75_ar-0.03__i-1_v-500_g-0.0-0.1_et-0.6-0.8_ep-1.25_d-0.8_dr-0.3-0.75_ar-0.03-0.1-0.3_nsi-1000_nspi-100_s-7.mps 
+      master   with     0 integer and  3000 binary variables (out of  3000 var.s) and  6002 constr.s
+      follower with     0 integer and  2500 binary variables (out of  3000 var.s) and  6001 constr.s
+ --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Warning: Control callbacks may disable some MIP features.
+Probing time = 0.02 sec. (1.26 ticks)
+Clique table members: 2500.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: traditional branch-and-cut.
+Parallel mode: opportunistic, using up to 44 threads.
+Parallel mode: opportunistic, using up to 44 threads for concurrent optimization.
+
+Iteration log . . .
+Iteration:     1   Dual objective     =        -43908.160000
+Iteration:   352   Dual objective     =        -40878.120000
+Iteration:   710   Dual objective     =        -37599.720000
+Iteration:  1073   Dual objective     =        -34342.480000
+Iteration:  1418   Dual objective     =        -32030.394189
+Using devex.
+
+Primal simplex solved model.
+
+Root relaxation solution time = 0.02 sec. (25.98 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0   -15315.8898   708                 -15315.8898     2013         
+      0     0   -13770.8899   276                Cliques: 590     2202         
+      0     0   -13527.7822   240                Cliques: 225     2306         
+      0     0   -13405.6475   216                Cliques: 185     2399         
+      0     0   -13325.3283   171                Cliques: 175     2475         
+      0     0   -13267.0109   168                Cliques: 140     2542         
+      0     0   -13222.9814   167                Cliques: 135     2612         
+      0     0   -13188.9213   126                Cliques: 120     2665         
+      0     0   -13153.9726   142                 Cliques: 95     2723         
+      0     0   -13111.8397   138                Cliques: 106     2784         
+      0     0   -13079.1027   126                Cliques: 100     2837         
+      0     0   -13058.5503   121                Cliques: 100     2888         
+      0     0   -13031.2208   162                 Cliques: 95     2955         
+      0     0   -12998.6840   132                 Cliques: 95     3024         
+      0     0   -12945.0005   178                Cliques: 100     3124         
+      0     0   -12871.0365   153                Cliques: 100     3522         
+      0     0   -12777.6800    59                   Cuts: 106     3840         
+      0     0   -12764.0000     3                 Cliques: 30     3853         
+      0     0   -12764.0000     3                  MIRcuts: 1     3854         
+      0     0   -12764.0000     3                     User: 2     3961         
+      0     0   -12764.0000     3                     User: 2     3962         
+      0     0   -12759.1213    13                     User: 2     4078         
+
+Clique cuts applied:  2496
+User cuts applied:  6
+
+Root node processing (before b&c):
+  Real time             =    1.02 sec. (931.63 ticks)
+Parallel b&c, 44 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    1.02 sec. (931.63 ticks)
+CPLEX Error  1217: No solution exists.
+CPLEX Error  1217: No solution exists.
+Warning: Control callbacks may disable some MIP features.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: traditional branch-and-cut.
+Parallel mode: opportunistic, using up to 44 threads.
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0   -12758.6903     9                     Cuts: 6     4089         
+      0     0   -12758.6903    12                     Cuts: 3     4092         
+      0     0   -12758.6903    12                  MIRcuts: 1     4094         
+      0     0   -12758.6903     9                     User: 2     4099         
+      0     2   -12758.6903     9                    Cuts: 20     4099         
+Elapsed time = 2.85 sec. (545.60 ticks, tree = 0.01 MB, solutions = 0)
+    302   140   -12758.6903     9                 -12758.6903     5543         
+                                                     Cuts: 38                  
+    668   871   -12758.5011    15                 -12758.6903     9362         
+    916   275   -12758.3198    21                 -12758.6903     6219         
+   1121   430   -12758.2158    28                 -12758.6903     7160         
+   1293   885   -12757.7817    18                 -12758.6903     9438         
+   1508   712   -12757.9395    30                 -12758.6903     8334         
+   1747   996   -12757.9050    24                 -12758.6903    10083         
+   1986   837   -12757.1079    25                 -12758.6903     9061         
+   2210  1338   -12757.9950    27                 -12758.6903    12423         
+   3034  2250   -12756.3682    51                 -12758.6903    21740         
+Elapsed time = 528.01 sec. (3656.87 ticks, tree = 6.40 MB, solutions = 0)
+   3601  1976   -12755.3842    32                 -12758.6903    19521         
+   4101  3294   -12755.0728    18                 -12758.6903    32255         
+   4607  2669   -12751.0296    48                 -12758.6903    25913         
+   5121  2887   -12751.6130    69                 -12758.6903    27545         
+   5588  2765   -12746.0530    58                 -12758.6903    26388         
+   5976  4437   -12750.6389    61                 -12758.6903    44945         
+   6365  3818   -12744.8400    96                 -12758.6903    38647         
+   6719  3610   -12747.6701    55                 -12758.6903    36539         
+   7031  5723   -12748.5371    75                 -12758.6903    55696         
+   7314  4193   -12746.6060    91                 -12758.6903    42390         
+Elapsed time = 1828.12 sec. (13205.34 ticks, tree = 20.73 MB, solutions = 0)
+   7604  4214   -12746.4100    94                 -12758.6903    42671         
+   7886  5147   -12747.9262    53                 -12758.6903    51328         
+   8148  4799   -12753.4562    45                 -12758.6903    47834         
+   8388  5411   -12746.4085    88                 -12758.6903    52746         
+   8641  6856   -12748.0995    64                 -12758.6903    69359         
+   8883  5847   -12744.5205    63                 -12758.6903    57362         
+   9087  6802   -12747.0959    64                 -12758.6903    68807         
+   9291  8154   -12745.1589    72                 -12758.6903    80757         
+   9521  8156   -12745.1589    69                 -12758.6903    80772         
+   9730  8618   -12744.9504    43                 -12758.6903    84649         
+Elapsed time = 3154.88 sec. (22809.95 ticks, tree = 30.60 MB, solutions = 0)
+   9973  9488   -12744.0260    92                 -12758.6903    90402         
+  10212  8556   -12748.0385    46                 -12758.6903    83758         
+  10462  7738   -12746.1343    69                 -12758.6903    77480         
+  10668  7969   -12745.1817    63                 -12758.6903    80642         
+  10847  9165   -12741.6371   102                 -12758.6903    88315         
+  10995  7647   -12748.3120    81                 -12758.6903    77040         
+  11150  8693   -12744.9292   108                 -12758.6903    85199         
+  11310  9593   -12746.0435    99                 -12758.6903    90872         
+  11462  8002   -12744.7215    57                 -12758.6903    79897         
+  11598  8209   -12745.0832    78                 -12758.6903    81059         
+Elapsed time = 3599.19 sec. (32387.51 ticks, tree = 48.32 MB, solutions = 0)
+  11691  9198   -12747.0408    97                 -12758.6903    88541         
+  11786  8831   -12749.4204    61                 -12758.6903    85860         
+  11859  9100   -12753.3732    32                 -12758.6903    87685         
+  11900  8844   -12749.4204    61                 -12758.6903    85913         
+  11935  8824   -12753.4562    45                 -12758.6903    85870         
+  11973  9110   -12753.3732    32                 -12758.6903    87740         
+  12007  9105   -12748.3120    81                 -12758.6903    87757         
+  12030  9750   -12749.4204    61                 -12758.6903    91644         
+  12045  9355   -12748.3120    81                 -12758.6903    89870         
+  12055  9247   -12753.4562    45                 -12758.6903    88918         
+Elapsed time = 3599.19 sec. (42680.80 ticks, tree = 48.32 MB, solutions = 0)
+  12070  9935   -12748.3120    81                 -12758.6903    92709         
+  12076  9937   -12748.3120    81                 -12758.6903    92726         
+  12086  9604   -12753.4562    45                 -12758.6903    90927         
+  12089  9852   -12753.4562    45                 -12758.6903    92259         
+  12094 10160   -12753.4562    45                 -12758.6903    93862         
+  12100 10264   -12753.4562    45                 -12758.6903    94388         
+
+Clique cuts applied:  2497
+Cover cuts applied:  29
+Implied bound cuts applied:  1
+Gomory fractional cuts applied:  1
+User cuts applied:  8
+
+Root node processing (before b&c):
+  Real time             =    0.45 sec. (540.36 ticks)
+Parallel b&c, 44 threads:
+  Real time             = 3598.77 sec. (49554.38 ticks)
+  Sync time (average)   =    1.05 sec.
+  Wait time (average)   =    0.08 sec.
+                          ------------
+Total (root+branch&cut) = 3599.23 sec. (50094.74 ticks)
+CPLEX Error  1217: No solution exists.
+CPLEX Error  1217: No solution exists.
+
+STAH; input_file ; zbest ; final_bound ; root_bound; time (s.); root_time (s.); opt ;nodes ; %root_gap; %final_gap; setting 
+STAT; data/cng/solver_instances/v-500_g-0.1_ep-1.25_de-0.8_dr-0.75_ar-0.03__i-1_v-500_g-0.0-0.1_et-0.6-0.8_ep-1.25_d-0.8_dr-0.3-0.75_ar-0.03-0.1-0.3_nsi-1000_nspi-100_s-7.mps ; 100000000000000000000.000000 ; -12758.690318  ; -12759.121253 ; 3600.337919 ; 1.107585 ; 0 ;12105 ; 100.000000 ; 100.000000 ; 4 
+
+
+-------------------------------------------------------------------------------------------------------------------------
+ NO SOLUTION AVAILABLE FOR data/cng/solver_instances/v-500_g-0.1_ep-1.25_de-0.8_dr-0.75_ar-0.03__i-1_v-500_g-0.0-0.1_et-0.6-0.8_ep-1.25_d-0.8_dr-0.3-0.75_ar-0.03-0.1-0.3_nsi-1000_nspi-100_s-7.mps
+-------------------------------------------------------------------------------------------------------------------------
+
