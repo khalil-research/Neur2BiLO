@@ -1,19 +1,21 @@
 # Neur2BiLO
 
 
-Implementation of "Neur2BiLO: Neural Bilevel Optimization" [https://arxiv.org/pdf/2205.12006.pdf](https://arxiv.org/pdf/2402.02552.pdf). Note that this repository only contains the data. The remainder of the code will be added at a later date.
-
+Implementation of Neur2BiLO, an efficient learning-based algorithm for mixed-integer (non-)linear bilevel optimization.  Implementation coming soon.  Reference below.
+ - \[1\] Dumouchelle, J., Julien, E., Kurtz, J., & Khalil, E. B. Neur2BiLO: Neural Bilevel Optimization.  *The Thirty-eighth Annual Conference on Neural Information Processing Systems (NeurIPS)*, 2024. [\[Paper\]](https://openreview.net/pdf?id=T5Xb0iGCCv)
+   
 
 # Reference
 
 Please cite our work if you find our code/paper useful to your work. 
 
 ```
-  @article{dumouchelle2024neur2bilo,
-    title={Neur2RO: Neural Bilevel Optimization},
-    author={Dumouchelle, Justin and Julien, Esther and Kurtz, Jannis and Khalil, Elias B},
-    journal={arXiv preprint arXiv:2402.02552},
-    year={2024}
+@inproceedings{
+  dumouchelle2024neurbilo,
+  title={Neur2Bi{LO}: Neural Bilevel Optimization},
+  author={Justin Dumouchelle and Esther Julien and Jannis Kurtz and Elias Boutros Khalil},
+  booktitle={The Thirty-eighth Annual Conference on Neural Information Processing Systems},
+  year={2024},
 }
 ```
 
@@ -36,6 +38,7 @@ node game, 2023.
 ### Donor Recipient Problem
 - Reference: Shraddha Ghatkar, Ashwin Arulselvan, and Alec Morton. Solution techniques for bi-level knapsack problems. *Computers & Operations Research*, 159:106343, 2023.
 - Link to instances: [https://github.com/ashwin-1983/DR-BKP/](https://github.com/ashwin-1983/DR-BKP/)
+- Note that if using these instances with our code, they will need to be downloaded, unzipped, and moved to `data/dr/DR-BKP-main/`.
 
 ### Discrete Network Design Problem
 - Reference: David Rey. Computational benchmarking of exact methods for the bilevel discrete network design problem. *Transportation Research Procedia*, 47:11–18, 2020.
