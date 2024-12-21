@@ -1,12 +1,14 @@
-## Notebook for Discrete Network Design Problem (DNDP)
+# Notebook for Discrete Network Design Problem (DNDP)
 
 This self-contained notebook contains all the code to reproduce the results for the DNDP.  For DNDP, the implementation is more straightforward as a single model is trained for a fixed road network. In contrast, KP, CNP, and DRP use trained models across instances with variable parameters.  This assumption for DNDP allows simpler models to be used, i.e., feed-forward networks and gradient-boosted trees, and simpler surrogate models. his assumption for DNDP allows simpler models, i.e., feed-forward networks and gradient-boosted trees, and simpler surrogate models.  
 
 See `dndp.ipynb` for a Jupyter notebook with the code. The experiments were run using `dndp.py` on the same computing cluster as other benchmarks, and the output is available in `dndp.log.`
 
+## Getting Started
+- `ipopt` must be included in this directory.
+- `Instances/` are available at [https://github.com/davidrey123/DNDP/](https://github.com/davidrey123/DNDP/) and should be placed in this directory directly.  
 
-
-### Parsing the results
+## Parsing the results
 
 dndp_results.csv has the following header columns: ['instance_name', 'budget', 'n_edges', 'method', 'obj', 'time']
 
