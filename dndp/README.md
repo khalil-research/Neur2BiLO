@@ -10,20 +10,20 @@ See `dndp.ipynb` for a Jupyter notebook with the code. The experiments were run 
 
 ## Parsing the results
 
-dndp_results.csv has the following header columns: ['instance_name', 'budget', 'n_edges', 'method', 'obj', 'time']
+dndp_results.csv has the following header columns: ['instance_name', 'budget', 'n_edges', 'method', 'obj', 'lower_obj', 'time']
 
 Each (instance_name, budget={25,50,75}, n_edges={10,20}) triplet represents one test case.
 
 For each test case, there is one row for each of the following methods:
 - [3 methods] The MKKT solver at time limits 5, 10, 30 seconds
 - [3 methods] Our method with an NN embedding in:
-    ml-u mode (method = nn_u_0)
-    ml-s mode with Gurobi's Piecewise-linear approxiamtion (method = nn_s_0)
-    ml-s mode with Gurobi's spatial branch-and-bound (method = nn_s_1, not used, but implemented)
+  -  nn-u mode (method = nn_u_0)
+  -  nn-l mode with Gurobi's Piecewise-linear approxiamtion (method = nn_s_0)
+  -  nn-l mode with Gurobi's spatial branch-and-bound (method = nn_s_1, not used, but implemented)
 - [3 methods] Our method with a GBT (Gradient-Boosted Tree) embedding in:
-    ml-u mode (method = gbt_u_0)
-    ml-s mode with Gurobi's Piecewise-linear approxiamtion (method = gbt_s_0)
-    ml-s mode with Gurobi's spatial branch-and-bound (method = gbt_s_1, not used, but implemented)
+  -  gbt-u mode (method = gbt_u_0)
+  -  gbt-l mode with Gurobi's Piecewise-linear approxiamtion (method = gbt_s_0)
+  -  gbt-l mode with Gurobi's spatial branch-and-bound (method = gbt_s_1, not used, but implemented)
 
 Column 'obj' is the leader objective value (lower is better).
 
